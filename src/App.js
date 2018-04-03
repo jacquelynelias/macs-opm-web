@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Main from './components/main.jsx';
-import Menu from './components/menu.jsx';
 import {
   BrowserRouter as Router,
   Route,
