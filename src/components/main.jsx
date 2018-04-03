@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Menu from './menu'
 import {
     BrowserRouter as Router,
     Route,
     Link,
     Switch
   } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+  import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 class Main extends Component {
-
-    render() {
+      render() {
         return (
             <div id="Landing">
-                <h1>Mac's Place</h1>
-                <Button>Continue</Button>
+                <img src={require('../assets/logo.png')} align="center" />
+                <div>
+                    <Button  bsSize="large"> <Link to='/menu' >Order Food </Link></Button>
+                </div>
+
             </div>
         )
     }
