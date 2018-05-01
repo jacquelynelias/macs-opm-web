@@ -9,7 +9,8 @@ import {
   Switch
 } from 'react-router-dom'
 import { Grid } from 'react-bootstrap';
-import Menu from './components/menu';
+import Menu from './components/menu.jsx';
+
 
 class App extends Component {
   render() {

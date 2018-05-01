@@ -12,6 +12,7 @@
 
 .btn-outline-danger {
     background-color: rgba(255,255,255,0.3);
+    font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .options {
@@ -20,5 +21,49 @@
 }
 
 .menu-item {
-   margin: 10px;
+   margin: 5px;
+   overflow:hidden;
 }
+
+
+
+.header {
+    width:100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 91.93%, transparent), url(../assets/smu02.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.header-text {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.header-text h1 {
+    font-size: 80px;
+    text-shadow: 3px 3px #000000;
+    
+}
+
+.carousel {
+    margin: 0 auto ;
+}
+.carousel-inner img {
+    /*height: 200px !important;*/
+    width:80vh;
+  }
