@@ -1,3 +1,24 @@
 .card .bg-dark .text-white {
     display:inline-block;
 }
+
+.container-fluid {
+    padding:0px;
+}
+
+#root > div > div > div > div > nav > a:nth-child(2) > i {
+    color: #000000;
+}
+
+.btn-outline-danger {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.options {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu-item {
+   margin: 10px;
+}
