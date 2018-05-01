@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 import { Grid } from 'react-bootstrap';
 import Menu from './components/menu.jsx';
+import MenuItem from './components/menu-items.jsx'
 
 
 class App extends Component {
@@ -19,8 +20,10 @@ class App extends Component {
       <Router>
         <div>
       <Switch>
-         <Route exact path='/' component={Main}/>
+        <Route exact path='/' component={Main}/>
         <Route path='/menu' component={Menu}/>
+        <Route path='/choose' component={MenuItem}/>
+
       </Switch>
         
         </div>

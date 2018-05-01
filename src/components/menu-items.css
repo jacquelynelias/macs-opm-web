@@ -7,7 +7,7 @@
     background-color: rgb(250,247,241);
 }
 
-#root > div > div > div > div > nav > a:nth-child(2) > i {
+#root > div > div > div > nav > a:nth-child(2) > i {
     color: #000000;
 }
 
@@ -39,11 +39,16 @@
    overflow:hidden;
 }
 
+.button-back {
+    margin-left: 20px;
+}
 
-
+.button-checkout {
+    text-align:right;
+}
 .header {
     width:100%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 91.93%, transparent), url(../assets/smu02.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 91.93%, transparent), url(../assets/smu14.jpg);
     height: 300px;
     background-repeat: no-repeat;
     background-position: 50%;

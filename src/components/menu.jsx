@@ -220,7 +220,7 @@ class Menu extends Component {
             <nav className="navbar navbar-light bg-light">
                         {console.log("in log")}
                 <a className="navbar-brand" href="#">
-                    <img src={require('../assets/logo.png')} height="30" alt=""/>
+                    <img src={require('../assets/logo.png')} height="40" alt=""/>
                 </a>
                  <a href="#">
                     <i class="material-icons">shopping_cart</i>
@@ -297,7 +297,7 @@ class Menu extends Component {
                                             <div className="card bg-dark text-white">
                                                 <div className="card-img-overlay">
                                                     <div className="row">
-                                                        <h3>{category.name}</h3>
+                                                        <h3 className="category-text">{category.name}</h3>
                                                     </div>
                                                     <div className="row">
                                                         <button type="button" className="btn btn-outline-danger" onClick={console.log("on button")}>ORDER ></button>
