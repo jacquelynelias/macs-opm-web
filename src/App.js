@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 import { Grid } from 'react-bootstrap';
 import Menu from './components/menu';
+import Cart from './components/cart';
 
 class App extends Component {
   render() {
@@ -19,7 +20,7 @@ class App extends Component {
         <div>
       <Switch>
          <Route exact path='/' component={Main}/>
-        <Route path='/menu' component={Menu}/>
+        <Route path='/menu' component={Cart}/>
       </Switch>
         
         </div>
