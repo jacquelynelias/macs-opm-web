@@ -49,19 +49,42 @@ import {
             }
         ]
     }
+
+    navbar = () => {
+        return (
+            <nav className="navbar navbar-light bg-light">
+                        {console.log("in log")}
+                <a className="navbar-brand" href="#">
+                    <img src={require('../assets/logo.png')} height="40" alt=""/>
+                </a>
+                 <a href="/cart">
+                    <i class="material-icons" >shopping_cart</i>
+                </a>
+            </nav>
+        )
+    }
     render() {
         return (
+            <div className="fluid-container">
+                {this.navbar()}
+            <div className="row">
+            <div className="col-md-12">
             <div className="table-responsive">
-                <table className="table shoping-cart-table">
+                <table className="table table-striped ml-4">
+                <thead>
+    <tr className ="row">
+      <th className="col-8" >Item</th>
+      <th className="col-4" >Price</th>
+    </tr></thead>
                     <tbody >
                     {this.state.cartItems.map(function (item) {
                     return(
                     <tr className="row">
                    
-                        <td width="col-3">
+                        <td width="col-5">
                         <img src={item.img}/>
                         </td>
-                        <td className="desc col-6">
+                        <td className="desc col-3">
                             <h3>
                             {item.name}
                             </h3>
@@ -73,17 +96,8 @@ import {
                                 <dd>A description list is perfect for defining terms.</dd>
                             </dl>
                         </td>
-
-                        <td className="col-1">
-                            ${item.cost}
-                        </td>
-                        <td width className=" col-1">
-                            <input type="text" className="form-control" value={item.quantity}/>
-                        </td>
-                        <td>
-                            <h4>
-                                {item.quantity * item.cost}
-                            </h4>
+                        <td className="col-4">
+                           <h1 className="text-center" > ${item.cost}</h1>
                         </td>
                     </tr>
                    
@@ -92,7 +106,11 @@ import {
                     </tbody>
                 </table>
             </div>
-
+            </div>
+            <div className="col-md-4">
+            </div>
+            </div>
+                </div>
 
         )
     }
