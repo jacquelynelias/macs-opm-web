@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 import { Button, Row, Col, Navbar, NavItem, Nav, MenuItem, NavDropdown } from 'react-bootstrap';
 import Footer from './footer.jsx'
+import MenuItems from './menu-items.jsx'
 
 var categories = [
     {
@@ -26,13 +27,13 @@ var categories = [
                 id:1,
                 name:"Chicken and Waffles",
                 ingredients: ["Bread", "Chicken"],
-                img: require("../assets/buffalo.jpg")
+                img: require("../assets/chicken.jpg")
             },
             {
                 id:2,
                 name:"PB&J",
                 ingredients: ["Peanut Butter", "Jelly", "Bread"],
-                img: require("../assets/buffalo.jpg")
+                img: require("../assets/pbj.jpg")
             },
             
         ]
@@ -166,7 +167,7 @@ var categories = [
     {
         id: 5,
         name: "Drinks",
-        img: require("../assets/side.jpg"),
+        img: require("../assets/drink.jpg"),
         items: [
             {
                 id:0,
@@ -178,7 +179,7 @@ var categories = [
                 id:1,
                 name:"Fountain drink",
                 ingredients: [""],
-                img: require("../assets/buffalo.jpg")
+                img: require("../assets/drinks.jpg")
             },
             {
                 id:2,
@@ -213,12 +214,20 @@ class Menu extends Component {
     constructor(props) {
         super(props)
         this.navbar = this.navbar.bind(this)
+        this.handleClick = this.handleClick.bind(this)
+        this.state = {
+            id: ''
+        }
+    }
+
+    
+    handleClick(num) {
+        this.setState({ id: num});
     }
     /* Displays navigation bar */
     navbar = () => {
         return (
             <nav className="navbar navbar-light bg-light">
-                        {console.log("in log")}
                 <a className="navbar-brand" href="#">
                     <img src={require('../assets/logo.png')} height="40" alt=""/>
                 </a>
@@ -300,7 +309,7 @@ class Menu extends Component {
                                                         <h3 className="category-text">{category.name}</h3>
                                                     </div>
                                                     <div className="row">
-                                                        <button type="button" className="btn btn-outline-danger" onClick={console.log("on button")}>ORDER ></button>
+                                                        <button type="button" className="btn btn-outline-danger">ORDER ></button>
                                                     </div>
                                                 </div>
                                             </div>

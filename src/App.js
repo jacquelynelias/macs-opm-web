@@ -13,6 +13,7 @@ import Menu from './components/menu.jsx';
 import MenuItem from './components/menu-items.jsx'
 import Cart from './components/cart'
 
+
 class App extends Component {
   render() {
     return (
@@ -21,9 +22,11 @@ class App extends Component {
         <div>
       <Switch>
         <Route exact path='/' component={Main}/>
+        <Route path='/cart' component={Cart}/>
         <Route path='/menu' component={Menu}/>
         <Route path='/choose' component={MenuItem}/>
-        <Route path='/cart' component={Cart}/>
+        <Route path='/menu/:id' component={MenuItem}/>
+
       </Switch>
         
         </div>
