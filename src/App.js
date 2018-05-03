@@ -22,7 +22,7 @@ class App extends Component {
       <Switch>
         <Route exact path='/' component={Main}/>
         <Route path='/menu' component={Menu}/>
-        <Route path='/choose' component={MenuItem}/>
+        <Route path='/menu/:id' component={MenuItem}/>
 
       </Switch>
         
