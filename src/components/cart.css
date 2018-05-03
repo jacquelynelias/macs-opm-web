@@ -10,7 +10,7 @@
 
 
 .shoping-cart-table img{
-    max-width: 100px;
+    max-width: 300px;
     width: 100%;
 }
 .product-imitation.xl {
@@ -90,4 +90,6 @@ table.shoping-cart-table tr td:last-child {
   background: #ffffff;
   padding: 10px 15px;
 }
-                           
+.checkout{
+  position: static;
+}
