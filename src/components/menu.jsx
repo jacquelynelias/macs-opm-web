@@ -274,7 +274,7 @@ class Menu extends Component {
 
     render() {
             return (
-                <div className="screen">
+                <div className="screen menu">
                     <div className="container-fluid">
                         <Nav />
                         <div className="row">

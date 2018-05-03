@@ -46,7 +46,7 @@
 .button-checkout {
     margin-left: 40px;
 }
-.header {
+.menu-item .header {
     width:100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 91.93%, transparent), url(../assets/smu14.jpg);
     height: 300px;

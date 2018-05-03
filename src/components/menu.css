@@ -7,9 +7,6 @@
     background-color: rgb(250,247,241);
 }
 
-#root > div > div > div > div > nav > a:nth-child(2) > i {
-    color: #000000;
-}
 
 .btn-outline-danger {
     background-color: rgba(255,255,255,0.5);
@@ -41,7 +38,7 @@
 
 
 
-.header {
+.menu .header {
     width:100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 91.93%, transparent), url(../assets/smu02.jpg);
     height: 300px;

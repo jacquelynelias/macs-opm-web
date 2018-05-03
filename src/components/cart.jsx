@@ -58,11 +58,25 @@ import Nav from './navbar.jsx';
         });
         return total
     }  
+
+    menu = () => {
+        return (
+            <div className="row">
+                <div className="header">
+                    <div className="header-text">
+                        <h1>CART</h1>
+                    <h3>It's almost yours!</h3>
+                 </div>
+                </div>
+            </div>            
+        )
+    }   
    
     render() {
         return (
-            <div className="fluid-container">
+            <div className="fluid-container order">
                 <Nav />
+                {this.menu()}
                 <div className="row  ml-4 mt-4 mr-4 cart">
                     <div className="col-md-8">
                         <div className="table-responsive">

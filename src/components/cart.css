@@ -8,6 +8,14 @@
     color: #1ab394;
 }
 
+.order .header {
+  width:100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 91.93%, transparent), url(../assets/smu03.jpg);
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
 
 .cart img{
     max-width: 300px;

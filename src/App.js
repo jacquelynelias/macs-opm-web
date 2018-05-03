@@ -11,7 +11,7 @@ import {
 import { Grid } from 'react-bootstrap';
 import Menu from './components/menu.jsx';
 import MenuItem from './components/menu-items.jsx'
-import Cart from './components/cart'
+import Cart from './components/cart';
 
 
 class App extends Component {
@@ -21,12 +21,10 @@ class App extends Component {
       <Router>
         <div>
       <Switch>
-        <Route exact path='/' component={Main}/>
+      <Route exact path='/' component={Main}/>
         <Route path='/cart' component={Cart}/>
         <Route path='/menu' component={Menu}/>
         <Route path='/choose' component={MenuItem}/>
-        <Route path='/menu/:id' component={MenuItem}/>
-
       </Switch>
         
         </div>

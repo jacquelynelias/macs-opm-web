@@ -9,6 +9,7 @@ import {
   } from 'react-router-dom';
 import './menu-items.css';
 import Footer from './footer.jsx'
+import Nav from './navbar.jsx'
 
 var categories = [
     {
@@ -200,21 +201,12 @@ var categories = [
 class MenuItems extends Component {
     constructor(props) {
         super(props)
-        this.navbar = this.navbar.bind(this)
+        this.state={
+            id: 2
+
+        }
     }
-    /* Displays navigation bar */
-    navbar = () => {
-        return (
-            <nav className="navbar navbar-light bg-light">
-                <a className="navbar-brand" href="#">
-                    <img src={require('../assets/logo.png')} height="40" alt=""/>
-                </a>
-                 <a href="#">
-                    <i class="material-icons">shopping_cart</i>
-                </a>
-            </nav>
-        )
-    }
+
 
     menu = () => {
         return (
@@ -231,12 +223,13 @@ class MenuItems extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
-                {this.navbar()}
+            <div className="container-fluid menu-item">
+                <Nav />
                 {this.menu()}
                 <div className="row options">
                     <div className="row">                 
                     {categories[0].item.map(function (thing) {
+                        console.log(thing)
                         return (
                             <div className="col-md-4 col-sm-6 col-xs-12">
                                 <div className="menu-item">
