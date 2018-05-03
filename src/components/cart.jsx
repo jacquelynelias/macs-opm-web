@@ -18,11 +18,10 @@ console.log(JSON.parse(sessionStorage.getItem('cart')))
      getTotalCost() {
         var total = 0.0;
         this.state.cartItems.map(function (item){
-            total = total+item.price
+            total = total+item.price * item.quantity
         });
         return total
     }  
-<<<<<<< HEAD
 
     componentDidMount() {
         var cart = JSON.parse(sessionStorage.getItem('cart'))
@@ -77,7 +76,7 @@ console.log(JSON.parse(sessionStorage.getItem('cart')))
                         </dl>
                     </td>
                     <td className="col-4 ml-2">
-                        <h1 className="text-center alert" > ${item.price}</h1>
+                        <h1 className="text-center alert" > ${item.price.toFixed(2)}</h1>
                     </td>
                 </tr>
             )
@@ -92,9 +91,6 @@ console.log(JSON.parse(sessionStorage.getItem('cart')))
         }
 
     }
-=======
->>>>>>> 67f926ad2d5bf557686efb7d82a70ba07791b4e7
-   
     render() {
         return (
             <div className="fluid-container">
@@ -119,7 +115,7 @@ console.log(JSON.parse(sessionStorage.getItem('cart')))
                             <div className="card-body " >
                                 <h3 className="card-title">Summary</h3>
                                 <div className="card-subtitle mb-2 text-muted">
-                                    <h5>Subtotal: ${this.getTotalCost()}</h5>
+                                    <h5>Subtotal: ${this.getTotalCost().toFixed(2)}</h5>
                                     <h6>Tax: ${(this.getTotalCost() * .0875).toFixed(2)}</h6>
                                     <hr />
                                     <h4>Total: ${(this.getTotalCost()*1.0875).toFixed(2) }</h4>
