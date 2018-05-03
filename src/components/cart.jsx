@@ -22,6 +22,7 @@ console.log(JSON.parse(sessionStorage.getItem('cart')))
         });
         return total
     }  
+<<<<<<< HEAD
 
     componentDidMount() {
         var cart = JSON.parse(sessionStorage.getItem('cart'))
@@ -91,12 +92,13 @@ console.log(JSON.parse(sessionStorage.getItem('cart')))
         }
 
     }
+=======
+>>>>>>> 67f926ad2d5bf557686efb7d82a70ba07791b4e7
    
     render() {
         return (
-            <div className="fluid-container order">
+            <div className="fluid-container">
                 <Nav />
-                {this.menu()}
                 <div className="row  ml-4 mt-4 mr-4 cart">
                     <div className="col-md-8">
                         <div className="table-responsive">

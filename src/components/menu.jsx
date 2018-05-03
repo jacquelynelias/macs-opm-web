@@ -11,6 +11,7 @@ import { Button, Row, Col, MenuItem, NavDropdown } from 'react-bootstrap';
 import Footer from './footer.jsx'
 import MenuItems from './menu-items.jsx'
 import Nav from './navbar.jsx'; 
+import Cart from './cart'
 
 var categories = [
     {
@@ -315,7 +316,7 @@ class Menu extends Component {
         )
     }
 
-
+ 
     render() {
             return (
                 <div className="screen menu">
@@ -340,7 +341,15 @@ class Menu extends Component {
                                                         <h3 className="category-text">{category.name}</h3>
                                                     </div>
                                                     <div className="row">
+<<<<<<< HEAD
                                                         <Link to={'../choose/item/'+ category.id}><button type="button" className="btn btn-outline-danger">ORDER ></button></Link>
+=======
+                                                    <a href={"/menu/"+ category.id}>
+                                                        <button type="button" className="btn btn-outline-danger" onClick={() => () => () => this.x}>ORDER 
+                        
+                                                        </button>
+                                                        </a>
+>>>>>>> 67f926ad2d5bf557686efb7d82a70ba07791b4e7
                                                     </div>
                                                 </div>
                                             </div>
