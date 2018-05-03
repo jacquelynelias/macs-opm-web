@@ -8,6 +8,7 @@ import {
     Link,
     Switch
   } from 'react-router-dom'
+import Nav from './navbar.jsx';
   class Cart extends Component {
     state = {
         cartItems: [
@@ -58,24 +59,11 @@ import {
         return total
     }  
    
-    navbar = () => {
-        return (
-            <nav className="navbar navbar-light bg-light">
-                        {console.log("in log")}
-                <a className="navbar-brand" href="#">
-                    <img src={require('../assets/logo.png')} height="40" alt=""/>
-                </a>
-                 <a href="/cart">
-                    <i className="material-icons" >shopping_cart</i>
-                </a>
-            </nav>
-        )
-    }
     render() {
         return (
             <div className="fluid-container">
-                {this.navbar()}
-                <div className="row  ml-4 mt-4 mr-4">
+                <Nav />
+                <div className="row  ml-4 mt-4 mr-4 cart">
                     <div className="col-md-8">
                         <div className="table-responsive">
                             <table className="table table-striped">
