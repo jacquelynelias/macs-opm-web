@@ -9,6 +9,7 @@ import {
   Switch
 } from 'react-router-dom'
 import { Grid } from 'react-bootstrap';
+import Cart from './components/cart';
 import Menu from './components/menu.jsx';
 import MenuItem from './components/menu-items.jsx'
 
@@ -21,9 +22,9 @@ class App extends Component {
         <div>
       <Switch>
         <Route exact path='/' component={Main}/>
+        <Route path='/cart' component={Cart}/>
         <Route path='/menu' component={Menu}/>
         <Route path='/menu/:id' component={MenuItem}/>
-
       </Switch>
         
         </div>
