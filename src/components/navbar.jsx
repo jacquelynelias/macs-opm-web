@@ -1,7 +1,12 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch
+  } from 'react-router-dom';
 var styles = {
     color: "#000000"
 };
@@ -16,12 +21,12 @@ class Nav extends Component {
     render() {
         return (
             <nav className="navbar navbar-light bg-light">
-                <a className="navbar-brand" href="/menu">
+                <Link className="navbar-brand" to="/menu">
                     <img src={require('../assets/logo.png')} height="40" alt=""/>
-                </a>
-                 <a href="/cart">
+                </Link>
+                 <Link to="/cart">
                     <i class="material-icons" style={styles}>shopping_cart</i>
-                </a>
+                </Link>
             </nav>
         )
     }
