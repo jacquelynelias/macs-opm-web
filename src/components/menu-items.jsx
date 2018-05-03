@@ -257,14 +257,18 @@ class MenuItems extends Component {
 
         console.log(thing)
         if (cart.length > 0) {
+            var notInserted = true
             for (var m = 0; m < cart.length; m++) {
                 if (cart[m].name === thing.name) {
                     cart[m].quantity+=1;
-                } else {
-                    thing.quantity = 1;
+                    notInserted = false
+                } 
+            
+            }
+            if (notInserted){
+                thing.quantity = 1;
                     
-                    cart.push(thing)
-                }
+                cart.push(thing)
             }
         } else {
             thing.quantity = 1;
