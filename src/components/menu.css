@@ -5,6 +5,8 @@
 .container-fluid {
     padding:0px;
     background-color: rgb(250,247,241);
+    margin: 5px;
+    overflow:hidden;
 }
 
 
@@ -15,6 +17,13 @@
     border-color: rgb(178, 13, 41);
     border-radius: 0px;
     border: 2px solid;
+
+}
+
+.btn-outline-danger:hover {
+    background-color: rgb(178, 13, 41);
+    color: #FFFFFF;
+    border-color: rgb(178, 13, 41);
 
 }
 

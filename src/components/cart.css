@@ -21,6 +21,10 @@
     max-width: 300px;
     width: 100%;
 }
+
+.cart .btn-danger {
+  background-color: #dc3545;
+}
 .product-imitation.xl {
   padding: 120px 0;
 }

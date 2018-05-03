@@ -18,7 +18,7 @@ class Footer extends Component {
       return (
           <div className="footer">
               <h3>Contact Us</h3>
-              <a styles="color:#FFFFFF" href=""><i class="material-icons">email</i></a>
+              <a styles="color:#FFFFFF" href=""><i className="material-icons">email</i></a>
           </div>
       );
   }

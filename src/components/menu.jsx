@@ -16,24 +16,27 @@ var categories = [
     {
         id: 0,
         name: "Specials",
-        img: require("../assets/specials.jpg"),
+        img: require("../assets/specials.jpeg"),
         items: [
             {
                 id:0,
-                name:"Buffalo Pizza",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Buffalo pizza",
+                ingredients: ["Bread", "Chicken", "Cheese", "Buffalo sauce", "Marinara sauce"],
+                price: 3.99,
+                img: require("../assets/pizza_buffalo.jpg")
             },
             {
                 id:1,
-                name:"Chicken and Waffles",
-                ingredients: ["Bread", "Chicken"],
-                img: require("../assets/chicken.jpg")
+                name:"Chicken and waffles",
+                ingredients: ["Waffles", "Breaded chicken tenders"],
+                price: 3.99,
+                img: require("../assets/chicken_waffles.jpg")
             },
             {
                 id:2,
-                name:"PB&J",
+                name:"PB&J sandwich",
                 ingredients: ["Peanut Butter", "Jelly", "Bread"],
+                price: 3.99,
                 img: require("../assets/pbj.jpg")
             },
             
@@ -43,25 +46,35 @@ var categories = [
     {
         id: 1,
         name: "Burger",
-        img: require("../assets/burger.jpg"),
+        img: require("../assets/burger_allamerican.jpg"),
         items: [
             {
                 id:0,
-                name:"All American",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"All American burger",
+                ingredients: ["Bun", "Beef patty", "Onion", "Tomato"],
+                price: 4.99,
+                img: require("../assets/burger_allamerican.jpg")
             },
             {
                 id:1,
-                name:"Breakfast",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Breakfast burger",
+                ingredients: ["Bread", "Beef patty", "Egg", "Onion"],
+                price: 4.99,
+                img: require("../assets/burger_breakfast.jpg")
             },
             {
                 id:2,
-                name:"Veggie",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Veggie burger",
+                ingredients: ["Bread", "Veggie Pattie", "Lettuce", "Tomato"],
+                price: 4.99,
+                img: require("../assets/burger_veggie.jpg")
+            },
+            {
+                id:3,
+                name:"Chicken burger",
+                ingredients: ["Bread", "Chicken", "Swiss cheese", "Lettuce"],
+                price: 4.99,
+                img: require("../assets/burger_chicken.jpg")
             }
         ]
 
@@ -69,62 +82,84 @@ var categories = [
     {
         id: 2,
         name: "Pizza",
-        img: require("../assets/pizza.jpg"),
+        img: require("../assets/pizza_cheese.jpg"),
         items: [
             {
                 id:0,
-                name:"Cheese",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Cheese pizza",
+                ingredients: ["Bread", "Marinara sauce", "Cheese"],
+                price: 3.99,
+                img: require("../assets/pizza_cheese.jpg")
             },
             {
                 id:1,
-                name:"Vegetarian",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Vegetarian pizza",
+                ingredients: ["Bread", "Spinach", "Mushrooms", "Cheese", "Marinara sauce"],
+                price: 3.99,
+                img: require("../assets/pizza_veggie.jpeg")
             },
             {
                 id:2,
-                name:"Pepperoni",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Pepperoni pizza",
+                ingredients: ["Bread", "Marinara sauce", "Cheese", "Pepperoni"],
+                price: 3.99,
+                img: require("../assets/pizza_pepperoni.jpg")
             },
             {
                 id:3,
-                name:"Mediterranean",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Mediterranean pizza",
+                ingredients: ["Bread","Marinara sauce", "Olives", "Onion", "Cheese"],
+                price: 3.99,
+                img: require("../assets/pizza_meditteranean.jpeg")
+            },
+            {
+                id:4,
+                name:"Meat Lover's pizza",
+                ingredients: ["Bread", "Marinara sauce", "Sausage", "Cheese", "Pepperoni", "Ham"],
+                price: 3.99,
+                img: require("../assets/pizza_meat.jpg")
             }
         ]
     },
     {
         id: 3,
         name: "Salad",
-        img: require("../assets/salad.jpg"),
+        img: require("../assets/salad_caesar.jpg"),
         items: [
             {
                 id:0,
-                name:"Caesar",
-                ingredients: ["Lettuce", "Cheese"],
-                img: require("../assets/buffalo.jpg")
+                name:"Caesar salad",
+                ingredients: ["Romaine lettuce", "Cheese", "Croutons"],
+                price: 5.99,
+                img: require("../assets/salad_caesar.jpg")
             },
             {
                 id:1,
-                name:"Vegetarian",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Mediterranean salad",
+                ingredients: ["Romaine lettuce", "Cucumbers", "Feta cheese", "Tomatoes"],
+                price: 5.99,
+                img: require("../assets/salad_meditea.jpeg")
             },
             {
                 id:2,
-                name:"Pepperoni",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Southwest salad",
+                ingredients: ["Romaine lettuce", "Corn", "Black bean", "Tomatoes"],
+                price: 5.99,
+                img: require("../assets/salad_southwest.jpg")
             },
             {
                 id:3,
-                name:"Mediterranean",
-                ingredients: ["Bread", ""],
-                img: require("../assets/buffalo.jpg")
+                name:"Fruit salad",
+                ingredients: ["Spinach", "Strawberries", "Onions", "Blueberries"],
+                price: 5.99,
+                img: require("../assets/salad_berry.jpg")
+            },
+            {
+                id:4,
+                name:"Cobb salad",
+                ingredients: ["Egg", "Romaine lettuce", "Tomatoes", "Bacon"],
+                price: 5.99,
+                img: require("../assets/salad_cobb.jpg")
             }
         ]
     },
@@ -137,31 +172,36 @@ var categories = [
                 id:0,
                 name:"Fries",
                 ingredients: ["Potato", "Vegetable oil"],
+                price: 1.99,
                 img: require("../assets/side.jpg")
             },
             {
                 id:1,
                 name:"Side Salad",
-                ingredients: [{"Lettuce":true}, "Cheese", "Tomato"],
-                img: require("../assets/buffalo.jpg")
+                ingredients: ["Lettuce", "Cheese", "Tomato"],
+                price: 1.99,
+                img: require("../assets/side_salad.jpg")
             },
             {
                 id:2,
                 name:"Fruit cup",
                 ingredients: ["Pineapple", "Honeydew", "Grapes"],
-                img: require("../assets/buffalo.jpg")
+                price: 1.99,
+                img: require("../assets/side_fruit.jpg")
             },
             {
                 id:3,
                 name:"Chips",
-                ingredients: [""],
-                img: require("../assets/buffalo.jpg")
+                ingredients: ["Varies"],
+                price: 1.99,
+                img: require("../assets/side_chips.jpg")
             },
             {
                 id:3,
                 name:"Celery",
-                ingredients: ["Celery", "Peanut Butter"],
-                img: require("../assets/buffalo.jpg")
+                ingredients: ["Celery", "Peanut butter"],
+                price: 1.99,
+                img: require("../assets/side_celery.JPG")
             }
         ]
     },
@@ -173,26 +213,30 @@ var categories = [
             {
                 id:0,
                 name:"Hot drink",
-                ingredients: [""],
-                img: require("../assets/buffalo.jpg")
+                ingredients: ["Varies"],
+                price: 1.25,
+                img: require("../assets/drink_hot.jpg")
             },
             {
                 id:1,
                 name:"Fountain drink",
-                ingredients: [""],
-                img: require("../assets/drinks.jpg")
+                ingredients: ["Varies"],
+                price: 1.25,
+                img: require("../assets/drink.jpg")
             },
             {
                 id:2,
                 name:"2% Milk",
-                ingredients: [""],
-                img: require("../assets/buffalo.jpg")
+                ingredients: ["2% milk"],
+                price: 1.25,
+                img: require("../assets/drink_milk.jpg")
             },
             {
                 id:3,
                 name:"Chocolate Milk",
-                ingredients: [""],
-                img: require("../assets/buffalo.jpg")
+                ingredients: ["Chocolate milk"],
+                price: 1.25,
+                img: require("../assets/drink_chocomilk.jpg")
             }
         ]
     }
@@ -296,7 +340,7 @@ class Menu extends Component {
                                                         <h3 className="category-text">{category.name}</h3>
                                                     </div>
                                                     <div className="row">
-                                                        <button type="button" className="btn btn-outline-danger">ORDER ></button>
+                                                        <Link to={'../choose/item/'+ category.id}><button type="button" className="btn btn-outline-danger">ORDER ></button></Link>
                                                     </div>
                                                 </div>
                                             </div>
