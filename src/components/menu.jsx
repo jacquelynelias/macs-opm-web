@@ -7,9 +7,10 @@ import {
     Link,
     Switch
 } from 'react-router-dom'
-import { Button, Row, Col, Navbar, NavItem, Nav, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Button, Row, Col, MenuItem, NavDropdown } from 'react-bootstrap';
 import Footer from './footer.jsx'
 import MenuItems from './menu-items.jsx'
+import Nav from './navbar.jsx'; 
 
 var categories = [
     {
@@ -213,7 +214,6 @@ var pizza = {}
 class Menu extends Component {
     constructor(props) {
         super(props)
-        this.navbar = this.navbar.bind(this)
         this.handleClick = this.handleClick.bind(this)
         this.state = {
             id: ''
@@ -223,19 +223,6 @@ class Menu extends Component {
     
     handleClick(num) {
         this.setState({ id: num});
-    }
-    /* Displays navigation bar */
-    navbar = () => {
-        return (
-            <nav className="navbar navbar-light bg-light">
-                <a className="navbar-brand" href="#">
-                    <img src={require('../assets/logo.png')} height="40" alt=""/>
-                </a>
-                 <a href="#">
-                    <i class="material-icons">shopping_cart</i>
-                </a>
-            </nav>
-        )
     }
 
     carousel = () => {
@@ -289,7 +276,7 @@ class Menu extends Component {
             return (
                 <div className="screen">
                     <div className="container-fluid">
-                        {this.navbar()}
+                        <Nav />
                         <div className="row">
                             <div className="header">
                                 <div className="header-text">
