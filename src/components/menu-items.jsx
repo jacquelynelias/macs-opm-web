@@ -227,8 +227,9 @@ class MenuItems extends Component {
                 <Nav />
                 {this.menu()}
                 <div className="row options">
-                    <div className="row">                 
-                    {categories[0].item.map(function (thing) {
+                    <div className="row"> 
+                    {console.log()}            
+                    {categories[this.props.match.params.id].items.map(function (thing) {
                         console.log(thing)
                         return (
                             <div className="col-md-4 col-sm-6 col-xs-12">

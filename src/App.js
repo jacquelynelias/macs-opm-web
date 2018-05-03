@@ -23,8 +23,9 @@ class App extends Component {
       <Switch>
       <Route exact path='/' component={Main}/>
         <Route path='/cart' component={Cart}/>
+
+        <Route path='/menu/:id' component={MenuItem}/>
         <Route path='/menu' component={Menu}/>
-        <Route path='/choose' component={MenuItem}/>
       </Switch>
         
         </div>
