@@ -275,7 +275,9 @@ class MenuItems extends Component {
             cart.push(thing)
         }     
     }
-
+    componentWillUnmount(){
+       (e) => this.handleChange(e)
+    }
     handleChange(e) {
         sessionStorage.setItem('cart', JSON.stringify(cart));
         console.log("session" + JSON.parse(sessionStorage.getItem('cart')))
