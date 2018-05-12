@@ -257,14 +257,18 @@ class MenuItems extends Component {
 
         console.log(thing)
         if (cart.length > 0) {
+            var notInserted = true
             for (var m = 0; m < cart.length; m++) {
                 if (cart[m].name === thing.name) {
                     cart[m].quantity+=1;
-                } else {
-                    thing.quantity = 1;
+                    notInserted = false
+                } 
+            
+            }
+            if (notInserted){
+                thing.quantity = 1;
                     
-                    cart.push(thing)
-                }
+                cart.push(thing)
             }
         } else {
             thing.quantity = 1;
@@ -325,34 +329,8 @@ class MenuItems extends Component {
                 <Nav />
                 {this.menu()}
                 <div className="row options">
-<<<<<<< HEAD
                     <div className="row">               
                     {this.getCards()}
-=======
-                    <div className="row"> 
-                    {console.log()}            
-                    {categories[this.props.match.params.id].items.map(function (thing) {
-                        console.log(thing)
-                        return (
-                            <div className="col-md-4 col-sm-6 col-xs-12">
-                                <div className="menu-item">
-                                        <div className="card bg-dark text-white">
-                                            <div className="card-img-overlay">
-                                                <div className="row">
-                                                    <h3 className="category-text">{thing.name}</h3>
-                                                </div>
-                                                <div className="row">
-                                                    <button type="button" className="btn btn-outline-danger" onClick={console.log("on button")}>ADD ></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <img className="card-img-bottom" src={thing.img} />
-                                </div>
-                            </div>
-
-                        );
-                    })}
->>>>>>> 67f926ad2d5bf557686efb7d82a70ba07791b4e7
                     </div>
                     <div className="row">
                         <Link to="../../menu"><button type="button" className="btn btn-outline-danger button-back" onClick={(e)=>this.handleChange(e)}>&lt; BACK </button></Link>
